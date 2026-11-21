@@ -1,0 +1,27 @@
+# AWS SAM / build output
+.aws-sam/
+samconfig.toml
+
+# Secrets - NEVER commit these
+.env
+.env.*
+*.pem
+*.key
+.aws/
+credentials
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Node
+node_modules/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

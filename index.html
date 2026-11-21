@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Serverless File Storage</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>Serverless File Storage</h1>
+    <p id="message" role="status"></p>
+
+    <!-- Login / Sign-up -->
+    <section id="auth-view" class="card">
+      <h2>Sign in</h2>
+      <label>Email <input id="email" type="email" autocomplete="email" /></label>
+      <label>Password <input id="password" type="password" autocomplete="current-password" /></label>
+      <div class="row">
+        <button id="login-btn">Log in</button>
+        <button id="signup-btn" class="secondary">Sign up</button>
+      </div>
+
+      <div id="confirm-box" hidden>
+        <label>Verification code (check your email)
+          <input id="code" type="text" inputmode="numeric" />
+        </label>
+        <button id="confirm-btn">Confirm account</button>
+      </div>
+    </section>
+
+    <!-- File manager -->
+    <section id="app-view" class="card" hidden>
+      <div class="row space">
+        <h2>My files</h2>
+        <button id="logout-btn" class="secondary">Log out</button>
+      </div>
+
+      <div class="row">
+        <input id="file-input" type="file" />
+        <button id="upload-btn">Upload</button>
+      </div>
+      <p class="hint">Allowed: PNG, JPG, PDF, TXT. Max 50 MB.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Name</th><th>Size</th><th>Uploaded</th><th></th></tr>
+          </thead>
+          <tbody id="file-list"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
